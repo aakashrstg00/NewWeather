@@ -1,0 +1,40 @@
+li {
+    list-style: none;
+}
+
+body {
+    margin: 0px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.mainpanel {
+    border-color: #1d87e2;
+}
+
+.mainpanel > .panel-heading {
+    color: #fff;
+    background-color: #1d87e2;
+    border-color: #1d87e2;
+}
+
+.mainpanel > .panel-heading .badge {
+    color: #1d87e2;
+    background-color: #fff;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.center {
+    text-align: center;
+}
