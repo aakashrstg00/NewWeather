@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather : Sunshine or Raindrops</title>
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/my.css">
+    <script src="../libs/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/model.js"></script>
+    <script src="../js/controller.js"></script>
+</head>
+
+<body ng-app="citymodule">
+    <div ng-controller="citycontroller">
+        <div>
+            <ul id="navmenu">
+                <li><a href="#/shoes">HOME</a></li>
+                <li><a href="#/clothing">More</a></li>
+                <li><a href="#/electronics">Something</a></li>
+                <li class="title" style="float:left;background-color:#2a54a3"><a href="#/aboutus"><b>Raindrops or Sunshine?</b></a></li>
+            </ul>
+        </div>
+        <div style="margin-top:80px;width:100%">
+            <input type="text" ng-model="cityName" id="cityName" placeholder="Search places.." ng-init="cityName='Delhi'">
+            <button ng-click="searchByCid()" id="checkcity">Check</button>
+        </div>
+        <div class="panel mainpanel" style="width:24%;margin:40px;margin-left:10px">
+            <div class="panel-heading center"> {{result.name}} :: {{result.weather[0].main}} </div>
+            <ul>
+                <li>
+                    <h2> {{tempincelsius}} °C </h2></li>
+                <li>Humidity :: {{result.main.humidity}} %</li>
+                <li>Wind Speed :: {{result.wind.speed}} kmph</li>
+                <li>Summary :: {{result.weather[0].description}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--result.results[0].geometry.location.lat result.results[0].geometry.location.lng-->
