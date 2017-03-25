@@ -70,9 +70,9 @@
     
     #aboutmain:hover {
         background-image: url(../images/SkyBG.jpg);
-        border-radius: 60px;
-        padding: 10px 20px;
-        color: white;
-        margin-top: 30px;
-        font-size: 30px;
+    }
+
+    
+    #aboutmain:active {
+        background-image: url(../images/background2.jpg);
     }
