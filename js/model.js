@@ -2,7 +2,7 @@ app.factory("cityfactory", function ($http, $q) {
     var object = {
         serverCall: function (cidName) {
             var pr = $q.defer();
-            $http.get(urls.locPollURL + cidName + "&appid=" + urls.apikey).then(function (data) {
+            $http.get(urls.currentWeatherURL + cidName + "&appid=" + urls.apikey).then(function (data) {
                 pr.resolve(data);
                 console.log("data recieved");
             }, function (error) {

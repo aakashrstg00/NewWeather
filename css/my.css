@@ -1,37 +1,78 @@
-#navmenu>li {
-    float: right;
-    border-right: 1px solid #bbb;
-}
-
-#navmenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1e202b;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-#navmenu>li>a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-}
-
-#cityName {
-    border-radius: 10px;
-    background: #1e202b;
-    width: 100%;
-    color: white;
-    padding: 20px 50px 20px 20px;
-}
-
-#checkcity {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-}
+    #navmenu>li {
+        float: right;
+        border-right: 1px solid #bbb;
+    }
+    
+    #navmenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1e202b;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom-width: thin;
+    }
+    
+    #navmenu>li>a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    #navmenu>li>a:hover {
+        background-color: cornflowerblue;
+    }
+    
+    #cityName {
+        border-radius: 30px;
+        background: #1e202b;
+        width: 80%;
+        color: white;
+        padding: 20px 50px 20px 20px;
+        margin: 20px;
+        border: none;
+    }
+    
+    #checkcity {
+        border-radius: 30px;
+        padding: 20px 20px 20px 20px;
+        background: #1d87e2;
+        color: white;
+        border: none;
+    }
+    
+    #checkcity:hover {
+        background-color: cornflowerblue;
+    }
+    
+    #checkcity:active {
+        background-color: cadetblue;
+    }
+    
+    #main {
+        padding: 80px;
+    }
+    
+    #aboutmain {
+        background-image: url(../images/background.jpg);
+        border-radius: 60px;
+        padding: 10px 20px;
+        color: white;
+        font-family: 'Nova Oval', sans-serif;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    
+    #aboutmain:hover {
+        background-image: url(../images/SkyBG.jpg);
+        border-radius: 60px;
+        padding: 10px 20px;
+        color: white;
+        margin-top: 30px;
+        font-size: 30px;
+    }
