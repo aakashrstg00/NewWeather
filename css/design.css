@@ -10,8 +10,8 @@ body {
 .panel {
     margin-bottom: 20px;
     background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 10px;
+    border: 3px solid transparent;
+    border-radius: 12px;
     /*width: calc(100vh - 145px);*/
 }
 
@@ -23,11 +23,6 @@ body {
     color: #fff;
     background-color: #1d87e2;
     border-color: #1d87e2;
-}
-
-.mainpanel > .panel-heading .badge {
-    color: #1d87e2;
-    background-color: #fff;
 }
 
 .panel-heading {

@@ -1,19 +1,30 @@
-<div>
+<div ng-controller="citycontroller">
     <div style="margin-right:30px; width:100%" class="center">
-        <input type="text" ng-model="cityName" id="cityName" placeholder="Search places.." ng-init="cityName='Delhi'">
+        <input type="text" ng-model="cityName" id="cityName" placeholder="Search places..">
         <button ng-click="searchByCid()" id="checkcity">Check</button>
     </div>
-    <div class="panel mainpanel" style="width:24%;margin:40px;margin-left:10px">
-        <div class="panel-heading center"> {{result.name}} :: {{result.weather[0].main}} </div>
+    <div class="panel mainpanel" style="width:24%;margin:40px;margin-left:10px;">
+        <div class="panel-heading center"> {{result.location.city}}, {{result.location.country}}
+            <br> <i>{{result.item.condition.text}}</i> </div>
         <div>
-            <!--style="max-height=10; min-height=10; max-width=20; nim width=20"-->
             <ul>
-                <li style="font-family: 'Nova Oval',sans-serif ;font-size: 60px"> {{tempincelsius}}°C </li>
-                <li><img src="images/Humidity-64.png" alt="Humidity"> :: {{result.main.humidity}} %</li>
-                <li><img src="images/icon-wind@2x.png" alt="Wind Speed"> :: {{result.wind.speed}} kmph</li>
-                <li>Summary :: {{result.weather[0].description}}</li>
+                <li style="font-family: 'Nova Oval',sans-serif ;font-size: 60px"><img src="images/Temperature-50.png" alt="Temperature">{{result.item.condition.temp}} °C </li>
+                <li><img src="images/Humidity-50.png" alt="Humidity"> {{result.atmosphere.humidity}} %</li>
+                <li><img src="images/Pressure-50.png" alt="Pressure"> {{result.atmosphere.pressure}} mb</li>
+                <li><img src="images/Fan-50.png" alt="Wind Speed"> {{result.wind.speed}} kmph</li>
             </ul>
         </div>
     </div>
+    <div>
+        <ul>
+            <div>
+                <li ng-repeat="r in result.item.forecast|limitTo:7" id="hourly_li">
+                    <br> {{r.day}}
+                    <br> {{r.date}}
+                    <br> {{r.high}}
+                    <br> {{r.low}}
+                    <br> {{r.text}} </li>
+            </div>
+        </ul>
+    </div>
 </div>
-<div> </div>
