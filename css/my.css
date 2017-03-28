@@ -30,7 +30,7 @@
 
 #cityName {
     border-radius: 30px;
-    background: #1e202b;
+    background: #181a23;
     width: 80%;
     color: white;
     padding: 20px 50px 20px 20px;
@@ -81,18 +81,22 @@
     list-style-type: none;
     display: inline-block;
     color: white;
+    font-size: 20px;
     display: inline-block;
     margin-right: 60px;
+    margin-bottom: 20px;
     padding: 10px;
     padding-top: 4px;
+    border-radius: 10px;
     background-image: url(../images/background.jpg);
-    box-shadow: 10px 10px 20px #999998;
+    box-shadow: 10px 10px 20px #979998;
 }
 
-footer {
+
+/*footer {
     background-image: url(../images/background.jpg);
     bottom: 0px;
     height: 60px;
     font-family: 'Montserrat', sans-serif;
     vertical-align: middle;
-}
+}*/

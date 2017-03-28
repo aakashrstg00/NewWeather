@@ -3,15 +3,19 @@
         <input type="text" ng-model="cityName" id="cityName" placeholder="Search places..">
         <button ng-click="searchByCid()" id="checkcity">Check</button>
     </div>
-    <div class="panel mainpanel" style="width:24%;margin:40px;margin-left:10px;">
-        <div class="panel-heading center"> {{result.location.city}}, {{result.location.country}}
+    <div style="margin:40px; background-color:white; width:400px; border-radius:20px;">
+        <div style="background-color:#1d87e2; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px; font-family:'Nova Oval',sans-serif; color:white; font-size:20px;" class="center"> {{result.location.city}}, {{result.location.country}}
             <br> <i>{{result.item.condition.text}}</i> </div>
-        <div>
+        <div style=" padding:10px;">
             <ul>
-                <li style="font-family: 'Nova Oval',sans-serif ;font-size: 60px"><img src="images/Temperature-50.png" alt="Temperature">{{result.item.condition.temp}} °C </li>
-                <li><img src="images/Humidity-50.png" alt="Humidity"> {{result.atmosphere.humidity}} %</li>
-                <li><img src="images/Pressure-50.png" alt="Pressure"> {{result.atmosphere.pressure}} mb</li>
-                <li><img src="images/Fan-50.png" alt="Wind Speed"> {{result.wind.speed}} kmph</li>
+                <div>
+                    <li style="font-family: 'Nova Oval',sans-serif ;font-size: 60px"><img src="images/Temperature-50.png" alt="Temperature"><b>{{result.item.condition.temp}}°{{result.units.temperature}} </b></li>
+                </div>
+                <div style="padding-left:30px;">
+                    <li style="font-family: 'Macondo',sans-serif; font-size:30px"><img src="images/Humidity-50.png" alt="Humidity"> {{result.atmosphere.humidity}} %</li>
+                    <li style="font-family: 'Macondo',sans-serif; font-size:30px"><img src="images/Pressure-50.png" alt="Pressure"> {{result.atmosphere.pressure}} {{result.units.pressure}}</li>
+                    <li style="font-family: 'Macondo',sans-serif; font-size:30px"><img src="images/Fan-50.png" alt="Wind Speed"> {{result.wind.speed}} {{result.units.speed}}</li>
+                </div>
             </ul>
         </div>
     </div>
@@ -19,10 +23,10 @@
         <ul>
             <div>
                 <li ng-repeat="r in result.item.forecast|limitTo:7" id="hourly_li">
-                    <br> {{r.day}}
+                    <br> <b><u>{{r.day}}</u></b>
                     <br> {{r.date}}
-                    <br> {{r.high}}
-                    <br> {{r.low}}
+                    <br> Max. {{r.high}}
+                    <br> Min. {{r.low}}
                     <br> {{r.text}} </li>
             </div>
         </ul>
