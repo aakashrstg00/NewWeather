@@ -1,15 +1,15 @@
 <div ng-controller="citycontroller">
-    <div style="margin-right:30px; width:100%" class="center">
-        <input type="text" ng-model="cityName" id="cityName" placeholder="Search places..">
+    <div style="margin-right:30px; width:100%; border=1" class="center">
+        <input type="text" ng-model="cityName" id="cityName" placeholder="Search places.." ng-autocomplete="cName" options="{types:'(cities)'}" details="">
         <button ng-click="searchByCid()" id="checkcity">Check</button>
     </div>
-    <div style="margin:40px; background-color:white; width:400px; border-radius:20px;">
-        <div style="background-color:#1d87e2; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px; font-family:'Nova Oval',sans-serif; color:white; font-size:20px;" class="center"> {{result.location.city}}, {{result.location.country}}
+    <div class="box">
+        <div class="boxhead"> {{result.location.city}}, {{result.location.country}}
             <br> <i>{{result.item.condition.text}}</i> </div>
         <div style=" padding:10px;">
             <ul>
                 <div>
-                    <li style="font-family: 'Nova Oval',sans-serif ;font-size: 60px"><img src="images/Temperature-50.png" alt="Temperature"><b>{{result.item.condition.temp}}°{{result.units.temperature}} </b></li>
+                    <li style="font-family: 'Nova Oval',sans-serif ;font-size: 80px;"><img src="images/Temperature-80.png" alt="Temperature"><b>{{result.item.condition.temp}}°{{result.units.temperature}} </b></li>
                 </div>
                 <div style="padding-left:30px;">
                     <li style="font-family: 'Macondo',sans-serif; font-size:30px"><img src="images/Humidity-50.png" alt="Humidity"> {{result.atmosphere.humidity}} %</li>

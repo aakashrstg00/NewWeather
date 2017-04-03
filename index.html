@@ -11,27 +11,22 @@
     <link rel="stylesheet" href="css/my.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="js/autocomplete.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/model.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/route.js"></script>
+    <script src="js/directive.js"></script>
 </head>
 
 <body ng-app="citymodule">
-    <div>
-        <div id="header">
-            <ul id="navmenu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#/aboutus">About Us</a></li>
-                <li style="float:left;background-color:#2a54a3"><a href="#/aboutus"><b>Raindrops or Sunshine?</b></a></li>
-            </ul>
-        </div>
-        <div id="main">
-            <ng-view></ng-view>
-        </div>
+    <ros-header></ros-header>
+    <div id="main">
+        <ng-view></ng-view>
     </div>
-    <footer><img src="images/favicon.ico" style="float:left"><img src="images/favicon.ico" style="float:right"></footer>
+    <ros-footer></ros-footer>
 </body>
 
 </html>

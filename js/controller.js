@@ -4,7 +4,7 @@ app.controller("aboutuscontroller", function ($scope) {
 app.controller("citycontroller", function ($scope, cityfactory) {
     $scope.searchByCid = function () {
         console.log("Checking for city data");
-        var city = $scope.cityName || "Delhi";
+        var city = $scope.cName || "Delhi";
         var promise = cityfactory.serverCall(city);
         promise.then(function (data) {
             $scope.result = data.data.query.results.channel;
@@ -14,6 +14,7 @@ app.controller("citycontroller", function ($scope, cityfactory) {
         });
         console.log("$scope.cityName", $scope.cityName);
         console.log("city", city);
+        $scope.cityName = "";
     };
     $scope.searchByCid();
 });
