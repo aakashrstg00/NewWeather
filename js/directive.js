@@ -6,7 +6,7 @@ app.directive("rosHeader", function () {
 });
 app.directive("rosFooter", function () {
     return {
-        template: "<img src=\"mages/favicon.ico\" style=\"float:left\"><img src=\"images/favicon.ico\" style=\"float:right\">"
+        template: "<img src=\"images/favicon.ico\" style=\"float:left\"><img src=\"images/favicon.ico\" style=\"float:right\">"
         , restrict: "E"
     };
 });
